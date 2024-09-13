@@ -62,7 +62,10 @@ namespace Game
             float distance = _velocity.magnitude * Time.fixedDeltaTime;
 
             if (Physics.SphereCast(ray, _sphereRadius, out RaycastHit hit, distance))
+            {
+                LevelManager.Instance.DecalsPooler.SpawnDecal(hit);
                 HandleCollision(hit);
+            }
         }
 
         private void HandleCollision(RaycastHit hit)

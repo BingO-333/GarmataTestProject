@@ -23,5 +23,6 @@ namespace Game
 
         [field: SerializeField] public CameraController CameraController { get; private set; }
         [field: SerializeField] public BulletsPooler BulletPool { get; private set; }
+        [field: SerializeField] public DecalsPooler DecalsPooler { get; private set; }
     }
 }
